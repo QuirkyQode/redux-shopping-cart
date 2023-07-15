@@ -45,6 +45,13 @@ const cartSlice = createSlice({
         },
         setShowCart (state) {
                 state.showCart = !state.showCart;
+        },
+        reset: (state) => {
+            return {
+                itemsList: [],
+                totalQuantity: 0,
+                showCart: false
+            }
         }
     }
 })
