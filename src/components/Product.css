@@ -47,3 +47,12 @@ button {
 .orderBtn:hover {
   background: rgb(89, 0, 190);
 }
+.logout-btn {
+  padding: 10px;
+  backgroud: orangered;
+  border:none;
+}
+
+.logout-btn:hover {
+  backgroud: rgb(0, 6, 59)
+}

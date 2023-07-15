@@ -1,9 +1,11 @@
 import React from "react";
-import Header from "./Header";
+
 import Products from "./Products";
-import "./Layout.css";
 import CartItems from "./CartItems";
 import { useSelector } from "react-redux";
+import Header from "./Header";
+import "./Layout.css";
+
 const Layout = () => {
   let total = 0;
   const itemsList = useSelector(state => state.cart.itemsList);
