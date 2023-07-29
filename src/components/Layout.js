@@ -10,6 +10,7 @@ import { cartActions } from "../store/cart-slice";
 const Layout = () => {
   let total = 0;
   const itemsList = useSelector(state => state.cart.itemsList);
+  console.log(itemsList)
   const showCart = useSelector(state => state.cart.showCart)
   const dispatch = useDispatch();
   const resetCart = () =>{
