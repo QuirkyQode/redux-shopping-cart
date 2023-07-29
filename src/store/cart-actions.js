@@ -4,7 +4,7 @@ import { uiActions } from "./ui-slice";
 export const fetchData =() => {
     return async (dispatch) => {
         const fetchHandler = async() => {
-            const res = await fetch('https://redux-shop-84caf-default-rtdb.asia-southeast1.firebasedatabase.app/cartItems.json')
+            const res = await fetch(process.env.REACT_APP_FIREBASE_APP)
             const data = await res.json()
             return data;
         }
@@ -30,7 +30,7 @@ export const sendCartData = (cart) => {
           })
           );
         const sendRequest = async () => {
-            const res = await fetch('https://redux-shop-84caf-default-rtdb.asia-southeast1.firebasedatabase.app/cartItems.json', {
+            const res = await fetch(process.env.REACT_APP_FIREBASE_APP, {
             method: 'PUT',
             body: JSON.stringify(cart)
             })
